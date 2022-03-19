@@ -1,0 +1,565 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    list-style: none;
+    overflow-x: hidden;
+    /* user-select: none; */
+}
+
+:root{
+    --primary-color: #000;
+    --white-svg-color: invert(100%) sepia(100%) saturate(1%) hue-rotate(257deg) brightness(103%) contrast(102%);
+    --light-svg-color: invert(60%) sepia(100%) saturate(1%) hue-rotate(257deg) brightness(103%) contrast(102%);
+}
+
+body{
+    background:#000;
+}
+
+.topBanner{
+    width: 100%;
+    height: 748px;
+    /* background: red; */
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(255,255,255,0.1),  rgba(0,0,0,0.9)), url('./imgs/mainbanner.jpg');
+    border-bottom: 8px solid #222;
+}
+
+.container .topBanner .topheader{
+    /* background: rgb(139, 126, 126); */
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    align-items: center;
+}
+
+
+.container .topBanner .topheader .signBx{
+    display: flex;
+    /* background:red;   */
+    min-width: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 2.1rem;
+}
+
+.container .topBanner .topheader .signBx .selectBx{
+    background: black;
+    border: 0.07rem solid #fff;
+    border-radius: 4px;
+    padding: 0.3rem 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+/* // remove downward facing default arrow from select box */
+.container .topBanner .topheader .signBx .selectBx select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background:none;
+    padding: 0.3rem 0;
+    width: 100%;  
+    background: #000;
+
+    /* margin: 0 0.9rem; */
+    color: #fff;
+}
+
+
+.container .topBanner .topheader .signBx .selectBx::before{
+    content: "";
+    display: block;
+    background: url('./imgs/language_118997.svg') no-repeat;
+    filter: var(--white-svg-color);
+    width: 15px;
+    height: 15px;
+}
+
+.container .topBanner .topheader .signBx .selectBx::after{
+    content: "";
+    display: block;
+    background: url('./imgs/downarrow_113600.svg') no-repeat;
+    filter: var(--white-svg-color);
+    width: 16px;
+    height: 10px;    
+}
+
+
+.container .topBanner .topheader .signBx .btnBx button{
+    padding: 0.7rem 1.2rem;
+    background:red;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.logo-img{
+    display: block;
+    width: 170px;
+    height: 45px;
+}
+
+.topBanner .mainBx{
+    /* background:red; */
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem;
+    width: 100%;
+    color: #fff;
+    flex-direction: column;
+}
+
+.topBanner .mainBx .textBx{
+    /* background:yellow; */
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.topBanner .mainBx .textBx h1{
+    font-size: 3.7rem;
+    line-height: 1.1;
+}
+
+.topBanner .mainBx .textBx h3{
+    font-size: 1.8rem;
+}
+
+.topBanner .mainBx .textBx p{
+    font-size: 1.2rem;
+}
+
+.emailBx{
+    /* background:cyan; */
+    width: 950px;
+    display: flex;
+    margin-top: 0.4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.emailBx .inputBx{
+    width: 500px;
+    margin-top: 0.6rem;
+}    
+
+.emailBx .inputBx input{
+    width: 100%;
+    height: 60px;
+    padding-right: 3.4rem;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+.emailBx .BtnBx{
+    height: 60px;
+    margin-top: 0.6rem;
+    background: red;
+    display: flex;
+    justify-content: center;
+    padding: 0 1.8rem;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.emailBx .BtnBx .rightIcon{
+    filter: var(--white-svg-color);
+    width: 28px;
+    height: 24px;
+} 
+
+.emailBx .BtnBx a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.card-sec{
+    max-width: 100%;
+}
+
+
+.card-sec .card-container .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+    border-bottom: 8px solid #222;
+}
+
+.card-sec .card-container .card:nth-child(2){
+    flex-direction: row-reverse;
+    gap: 4rem;
+}
+
+.card-sec .card-container .card .textBx{
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #fff;
+}
+
+.card-sec .card-container .card .textBx h3{
+    font-size: 3.1rem;
+}
+
+.card-sec .card-container .card .textBx h4{
+    font-size: 1.6rem;
+    line-height: 1.3;
+}
+
+.card-sec .card-container .card .imgBx{
+    width: 500px;
+    position: relative;
+}
+
+.card-sec .card-container .card .imgBx .vid1{
+    position: absolute;
+    top: 21%;    
+    left: 13%;
+    width: 73%;
+}
+
+.card-sec .card-container .card .imgBx img{
+    display: block;
+    width: 100%;
+}
+
+.card-sec .card-container .card .imgBx .showBx {
+    background: #000;
+    border-radius: 6px;
+    padding: 0.5rem;
+    border: 2px solid #333;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    display: flex;
+    width: 350px;
+    transform: translate(-50%);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.card-sec .card-container .card .imgBx .showBx .downloadBx img{
+    width: 60px;
+    height: 60px;
+}
+
+.card-sec .card-container .card .imgBx .showBx .imgBook{
+    width: 70px;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card .vid2{
+    position: absolute;
+    top: 8%;    
+    left: 18%;
+    width: 63%;
+    z-index:-1;
+}
+
+.card-sec .card-container .card .imgBx .showBx .imgBook img{
+    display: block;
+    /* width: 100%; */
+}
+
+.card-sec .card-container .card .imgBx .showBx .text h2{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.1rem;
+}
+
+.card-sec .card-container .card .imgBx .showBx .text span{
+    color: #0071eb;
+}
+
+.card-sec .card-container .card:nth-child(4){
+    flex-direction: row-reverse;
+    gap: 4rem;
+}
+
+/* styling accordian */
+.accordian-container{
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+    gap: 2.5rem;
+    flex-direction: column;
+    border-bottom: 8px solid #222;
+}
+
+.accordian-container h1{
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.accordian-container .accordian{
+    max-width: 800px;
+}
+
+.accordian-container .accordian .accordianBtn{
+    background: #303030;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-size: 25px;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.accordian-container .accordian .accordianBtn .cross{
+    width: 35px;
+    height: 35px;
+    /* background:#000; */
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.accordian-container .accordian .accordianBtn .cross::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    transform: translate(-50%);
+    height: 100%;
+    background: #fff;
+}
+
+.accordian-container .accordian .accordianBtn .cross::after{
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    /* transform: translate(-50%); */
+    background: #fff;
+}
+
+.accordian-container .accordian .accordianBtn.active .cross{
+    /* background:red; */
+    transform: rotateZ(45deg);
+}
+
+.accordian-container .accordian .accordianBody{
+    background: #303030;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    padding: 0 26px;
+    border-top: 2px solid #000;
+    margin-bottom: 0.4rem;
+
+}
+
+.text{
+    color: #fff;
+    margin-bottom: -2rem;
+}
+
+.accordian-container .accordian .accordianBody p{
+    font-size: 1.7rem;
+    color: #fff;
+    line-height: 1.2;
+    padding: 22px;
+}
+
+.footer-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    width: 1100px;  
+    /* background:red; */
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 3rem; */
+}
+
+.footer .box{
+    padding: 1rem;
+}
+
+
+.footer .box ul li{
+    margin: 0.8rem 0;
+}
+
+.footer .box ul li a{
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+
+.footer .box ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer .box{
+    width: 25%;
+}
+
+.credits{
+    width: 100%;
+    color: #fff;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+    
+
+
+@media (max-width: 550px){
+    .logo-img{
+        display: block;
+        width: 88px;
+        height: 24px;
+    }
+
+    html{
+        font-size: 12px;
+    }
+
+    .container .topBanner .topheader .signBx .btnBx button{
+        padding: 0.6rem;
+    }
+    .container .topBanner .topheader .signBx .selectBx{
+        gap: 0.1rem;
+    }
+    .container .topBanner .topheader .signBx{
+        gap: 0.6rem;
+    }
+    .container .topBanner .topheader .signBx .selectBx select{
+        -webkit-appearance: none;
+        color: #fff;
+        width: 40px;
+    }
+    .footer .box{
+        width: 50%;
+    }
+}
+
+@media (max-width: 350px){
+    .topheader{
+        padding: 0rem 0rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .container .topBanner .topheader .signBx .btnBx button{
+        font-size: 10px;
+    }
+
+    .footer .box{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px){
+    .emailBx .inputBx{
+        width: 400px;
+        margin-top: 0.6rem;
+    }   
+}
+
+@media (max-width: 768px){
+    .emailBx {
+        flex-direction: column;
+    }
+
+    .emailBx .inputBx{
+        max-width: 630px;
+        margin: 0 4rem;
+        margin-top: 0.6rem;
+    }   
+
+    .topBanner .mainBx .textBx h1{
+        font-size: 3.2rem;
+        /* line-height: 1.1; */
+        overflow: hidden;
+    }
+    .emailBx .BtnBx a{
+        font-size: 1.5rem;
+    }
+
+    .accordian-container h1{
+        font-size: 2.2rem;
+    }
+
+    .accordian-container .accordian .accordianBody p{
+        font-size: 1.4rem;
+        line-height: 1.4;
+        padding: 12px;
+    }
+    .accordian-container .accordian .accordianBtn{
+        font-size: 20px;
+    }
+    .accordian-container .accordian .accordianBtn .cross{
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width: 991px){
+    .card-sec .card-container .card{
+        flex-wrap: wrap;
+    }
+    
+    .card-sec .card-container .card .textBx{
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-sec .card-container .card .textBx h3{
+        font-size: 2.4rem;
+    }
+    
+    .card-sec .card-container .card .textBx h4{
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+
+    .card-sec .card-container .card .imgBx{
+        width: 100%;
+    }
+}
